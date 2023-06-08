@@ -14,6 +14,14 @@
 		8E72DEA12A30629400A470E6 /* StopWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E72DEA02A30629400A470E6 /* StopWatchTests.swift */; };
 		8E72DEAB2A30629400A470E6 /* StopWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E72DEAA2A30629400A470E6 /* StopWatchUITests.swift */; };
 		8E72DEAD2A30629400A470E6 /* StopWatchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E72DEAC2A30629400A470E6 /* StopWatchUITestsLaunchTests.swift */; };
+		8E72DEBE2A30641100A470E6 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E72DEBD2A30641100A470E6 /* Stopwatch.swift */; };
+		8E72DEC02A30643200A470E6 /* StopwatchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E72DEBF2A30643200A470E6 /* StopwatchUseCase.swift */; };
+		8E72DEC22A30644700A470E6 /* StopwatchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E72DEC12A30644700A470E6 /* StopwatchInteractor.swift */; };
+		8E72DEC42A3064B800A470E6 /* StopwatchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E72DEC32A3064B800A470E6 /* StopwatchPresenter.swift */; };
+		8E72DEC62A3064D800A470E6 /* StopwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E72DEC52A3064D800A470E6 /* StopwatchView.swift */; };
+		8E769C0D2A315BE900F91AB1 /* min.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E769C0B2A315BE900F91AB1 /* min.mp3 */; };
+		8E769C0E2A315BE900F91AB1 /* second.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E769C0C2A315BE900F91AB1 /* second.mp3 */; };
+		8E769C102A31ADDB00F91AB1 /* StopwatchMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E769C0F2A31ADDB00F91AB1 /* StopwatchMode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,14 @@
 		8E72DEA62A30629400A470E6 /* StopWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StopWatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E72DEAA2A30629400A470E6 /* StopWatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchUITests.swift; sourceTree = "<group>"; };
 		8E72DEAC2A30629400A470E6 /* StopWatchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8E72DEBD2A30641100A470E6 /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
+		8E72DEBF2A30643200A470E6 /* StopwatchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchUseCase.swift; sourceTree = "<group>"; };
+		8E72DEC12A30644700A470E6 /* StopwatchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchInteractor.swift; sourceTree = "<group>"; };
+		8E72DEC32A3064B800A470E6 /* StopwatchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchPresenter.swift; sourceTree = "<group>"; };
+		8E72DEC52A3064D800A470E6 /* StopwatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchView.swift; sourceTree = "<group>"; };
+		8E769C0B2A315BE900F91AB1 /* min.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = min.mp3; sourceTree = "<group>"; };
+		8E769C0C2A315BE900F91AB1 /* second.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = second.mp3; sourceTree = "<group>"; };
+		8E769C0F2A31ADDB00F91AB1 /* StopwatchMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchMode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +110,11 @@
 		8E72DE8E2A30628D00A470E6 /* StopWatch */ = {
 			isa = PBXGroup;
 			children = (
+				8E769C062A315A1700F91AB1 /* Audio */,
+				8E72DEBB2A3063CD00A470E6 /* Protocols */,
+				8E72DEB92A3063A800A470E6 /* Models */,
+				8E72DEBC2A3063D700A470E6 /* Presenters */,
+				8E72DEBA2A3063B200A470E6 /* Views */,
 				8E72DE8F2A30628D00A470E6 /* StopWatchApp.swift */,
 				8E72DE912A30628D00A470E6 /* ContentView.swift */,
 				8E72DE932A30629400A470E6 /* Assets.xcassets */,
@@ -125,6 +146,49 @@
 				8E72DEAC2A30629400A470E6 /* StopWatchUITestsLaunchTests.swift */,
 			);
 			path = StopWatchUITests;
+			sourceTree = "<group>";
+		};
+		8E72DEB92A3063A800A470E6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8E72DEBD2A30641100A470E6 /* Stopwatch.swift */,
+				8E769C0F2A31ADDB00F91AB1 /* StopwatchMode.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8E72DEBA2A3063B200A470E6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8E72DEC52A3064D800A470E6 /* StopwatchView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8E72DEBB2A3063CD00A470E6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8E72DEBF2A30643200A470E6 /* StopwatchUseCase.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8E72DEBC2A3063D700A470E6 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				8E72DEC12A30644700A470E6 /* StopwatchInteractor.swift */,
+				8E72DEC32A3064B800A470E6 /* StopwatchPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		8E769C062A315A1700F91AB1 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				8E769C0B2A315BE900F91AB1 /* min.mp3 */,
+				8E769C0C2A315BE900F91AB1 /* second.mp3 */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +295,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E769C0E2A315BE900F91AB1 /* second.mp3 in Resources */,
+				8E769C0D2A315BE900F91AB1 /* min.mp3 in Resources */,
 				8E72DE972A30629400A470E6 /* Preview Assets.xcassets in Resources */,
 				8E72DE942A30629400A470E6 /* Assets.xcassets in Resources */,
 			);
@@ -257,8 +323,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E769C102A31ADDB00F91AB1 /* StopwatchMode.swift in Sources */,
+				8E72DEC22A30644700A470E6 /* StopwatchInteractor.swift in Sources */,
 				8E72DE922A30628D00A470E6 /* ContentView.swift in Sources */,
+				8E72DEBE2A30641100A470E6 /* Stopwatch.swift in Sources */,
 				8E72DE902A30628D00A470E6 /* StopWatchApp.swift in Sources */,
+				8E72DEC42A3064B800A470E6 /* StopwatchPresenter.swift in Sources */,
+				8E72DEC62A3064D800A470E6 /* StopwatchView.swift in Sources */,
+				8E72DEC02A30643200A470E6 /* StopwatchUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
