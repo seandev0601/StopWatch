@@ -12,6 +12,8 @@ protocol StopwatchUseCase {
     func pause()
     func reset()
     func toggleMode()
+    func toggleVoice()
     var elapsedSeconds: Int { get }
     var mode: StopwatchMode { get }
+    var voiceState: String { get }
 }

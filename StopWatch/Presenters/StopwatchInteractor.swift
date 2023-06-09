@@ -22,6 +22,10 @@ class StopwatchInteractor: StopwatchUseCase {
         return stopwatch.mode
     }
     
+    var voiceState: String {
+        return stopwatch.onVoice ? "Audio On" : "Audio Off"
+    }
+    
     init(stopwatch: Stopwatch) {
         self.stopwatch = stopwatch
     }
@@ -52,11 +56,17 @@ class StopwatchInteractor: StopwatchUseCase {
         stopwatch.mode = (stopwatch.mode == .standard) ? .compact : .standard
     }
     
+    func toggleVoice() {
+        stopwatch.onVoice = stopwatch.onVoice ? false : true
+    }
+    
     private func tick() {
         stopwatch.elapsedSeconds += 1
+        print("\(stopwatch.elapsedSeconds)")
+        
+        if !stopwatch.onVoice { return }
         playTickSoundIfNeeded()
         playDingSoundIfNeeded()
-        print("\(stopwatch.elapsedSeconds)")
     }
     
     private func playTickSoundIfNeeded() {
@@ -65,14 +75,8 @@ class StopwatchInteractor: StopwatchUseCase {
         }
         
         if stopwatch.mode == .compact { return }
-        
-        let tickSoundURL = Bundle.main.url(forResource: "second", withExtension: "mp3")
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: tickSoundURL!)
-            audioPlayer?.play()
-        } catch {
-            print("無法播放滴聲音效")
-        }
+    
+        audioPlay()
     }
     
     private func playDingSoundIfNeeded() {
@@ -80,12 +84,16 @@ class StopwatchInteractor: StopwatchUseCase {
             return
         }
         
-        let dingSoundURL = Bundle.main.url(forResource: "min", withExtension: "mp3")
+        audioPlay()
+    }
+    
+    private func audioPlay() {
+        let tickSoundURL = Bundle.main.url(forResource: "time", withExtension: "mp3")
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf: dingSoundURL!)
+            audioPlayer = try AVAudioPlayer(contentsOf: tickSoundURL!)
             audioPlayer?.play()
         } catch {
-            print("無法播放答聲音效")
+            print("無法播放滴聲音效")
         }
     }
 }

@@ -38,11 +38,19 @@ struct StopwatchView: View {
                 .padding()
             }
             
-            Button(action: presenter.didTapToggle) {
-                Text("\(presenter.toggleTitle)")
-                    .font(.title2)
+            HStack {
+                Button(action: presenter.didTapToggle) {
+                    Text("\(presenter.toggleTitle)")
+                        .font(.title2)
+                }
+                .padding()
+                    
+                Button(action: presenter.didTapVoiceToggle) {
+                    Text("\(presenter.voiceStateString)")
+                        .font(.title2)
+                }
+                .padding()
             }
-            .padding()
             
             Text("\(presenter.finishTimeText)")
                 .font(.title)

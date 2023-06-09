@@ -17,28 +17,6 @@ class StopwatchPresenter: ObservableObject {
         self.stopwatchUseCase = stopwatchUseCase
     }
     
-    func didTapStart() {
-        stopwatchUseCase.start()
-        startTimer()
-    }
-    
-    func didTapPause() {
-        stopwatchUseCase.pause()
-        stopTimer()
-        self.objectWillChange.send()
-    }
-    
-    func didTapReset() {
-        stopwatchUseCase.reset()
-        stopTimer()
-        self.objectWillChange.send()
-    }
-    
-    func didTapToggle() {
-        stopwatchUseCase.toggleMode()
-        self.objectWillChange.send()
-    }
-    
     var toggleTitle: String {
         return stopwatchUseCase.mode.rawValue
     }
@@ -67,11 +45,41 @@ class StopwatchPresenter: ObservableObject {
     
     var timeColor: Color {
         if timer != nil {
-            return Color.black
+            return Color("elapsedColor")
         } else {
             return Color.gray
         }
-        
+    }
+    
+    var voiceStateString: String {
+        return stopwatchUseCase.voiceState
+    }
+    
+    func didTapStart() {
+        stopwatchUseCase.start()
+        startTimer()
+    }
+    
+    func didTapPause() {
+        stopwatchUseCase.pause()
+        stopTimer()
+        self.objectWillChange.send()
+    }
+    
+    func didTapReset() {
+        stopwatchUseCase.reset()
+        stopTimer()
+        self.objectWillChange.send()
+    }
+    
+    func didTapToggle() {
+        stopwatchUseCase.toggleMode()
+        self.objectWillChange.send()
+    }
+    
+    func didTapVoiceToggle() {
+        stopwatchUseCase.toggleVoice()
+        self.objectWillChange.send()
     }
     
     private func startTimer() {

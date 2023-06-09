@@ -11,4 +11,5 @@ struct Stopwatch {
     var isRunning: Bool
     var elapsedSeconds: Int
     var mode: StopwatchMode = .standard
+    var onVoice: Bool = true
 }
