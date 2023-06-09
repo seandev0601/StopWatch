@@ -11,11 +11,11 @@ struct StopwatchView: View {
     @ObservedObject var presenter: StopwatchPresenter
     
     var body: some View {
-        VStack {
+        VStack() {
             Text("\(presenter.elapsedTimeText)")
-                .font(.system(size: 250, weight: .bold))
+                .font(.system(size: Device.deviceType == .ipad ? 250 : 200, weight: .bold))
                 .foregroundColor(presenter.timeColor)
-                .padding()
+                .padding(.bottom, -30)
                 
             
             HStack {
@@ -57,6 +57,11 @@ struct StopwatchView_Previews: PreviewProvider {
         let stopwatchInteractor = StopwatchInteractor(stopwatch: initialStopwatch)
         let stopwatchPresenter = StopwatchPresenter(stopwatchUseCase: stopwatchInteractor)
         
-        return StopwatchView(presenter: stopwatchPresenter)
+        return Group {
+            StopwatchView(presenter: stopwatchPresenter)
+                .previewInterfaceOrientation(.portrait)
+        }
+            
+            
     }
 }

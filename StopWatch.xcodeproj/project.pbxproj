@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E43EEF32A32B314009C2FB7 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E43EEF22A32B314009C2FB7 /* Device.swift */; };
 		8E72DE902A30628D00A470E6 /* StopWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E72DE8F2A30628D00A470E6 /* StopWatchApp.swift */; };
 		8E72DE922A30628D00A470E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E72DE912A30628D00A470E6 /* ContentView.swift */; };
 		8E72DE942A30629400A470E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E72DE932A30629400A470E6 /* Assets.xcassets */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E43EEF12A32B2D9009C2FB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8E43EEF22A32B314009C2FB7 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		8E72DE8C2A30628D00A470E6 /* StopWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StopWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E72DE8F2A30628D00A470E6 /* StopWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchApp.swift; sourceTree = "<group>"; };
 		8E72DE912A30628D00A470E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +113,7 @@
 		8E72DE8E2A30628D00A470E6 /* StopWatch */ = {
 			isa = PBXGroup;
 			children = (
+				8E43EEF12A32B2D9009C2FB7 /* Info.plist */,
 				8E769C062A315A1700F91AB1 /* Audio */,
 				8E72DEBB2A3063CD00A470E6 /* Protocols */,
 				8E72DEB92A3063A800A470E6 /* Models */,
@@ -153,6 +157,7 @@
 			children = (
 				8E72DEBD2A30641100A470E6 /* Stopwatch.swift */,
 				8E769C0F2A31ADDB00F91AB1 /* StopwatchMode.swift */,
+				8E43EEF22A32B314009C2FB7 /* Device.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 				8E769C102A31ADDB00F91AB1 /* StopwatchMode.swift in Sources */,
 				8E72DEC22A30644700A470E6 /* StopwatchInteractor.swift in Sources */,
 				8E72DE922A30628D00A470E6 /* ContentView.swift in Sources */,
+				8E43EEF32A32B314009C2FB7 /* Device.swift in Sources */,
 				8E72DEBE2A30641100A470E6 /* Stopwatch.swift in Sources */,
 				8E72DE902A30628D00A470E6 /* StopWatchApp.swift in Sources */,
 				8E72DEC42A3064B800A470E6 /* StopwatchPresenter.swift in Sources */,
@@ -494,9 +500,10 @@
 				DEVELOPMENT_TEAM = U4L3HBTLRQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = StopWatch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -523,9 +530,10 @@
 				DEVELOPMENT_TEAM = U4L3HBTLRQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = StopWatch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
