@@ -45,6 +45,7 @@
 /* Begin PBXFileReference section */
 		8E43EEF12A32B2D9009C2FB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8E43EEF22A32B314009C2FB7 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		8E43EEF42A32BF39009C2FB7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8E72DE8C2A30628D00A470E6 /* StopWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StopWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E72DE8F2A30628D00A470E6 /* StopWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchApp.swift; sourceTree = "<group>"; };
 		8E72DE912A30628D00A470E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 		8E72DE832A30628D00A470E6 = {
 			isa = PBXGroup;
 			children = (
+				8E43EEF42A32BF39009C2FB7 /* README.md */,
 				8E72DE8E2A30628D00A470E6 /* StopWatch */,
 				8E72DE9F2A30629400A470E6 /* StopWatchTests */,
 				8E72DEA92A30629400A470E6 /* StopWatchUITests */,
