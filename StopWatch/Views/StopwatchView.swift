@@ -13,38 +13,39 @@ struct StopwatchView: View {
     var body: some View {
         VStack {
             Text("\(presenter.elapsedTimeText)")
-                .font(.system(size: 150, weight: .bold))
+                .font(.system(size: 250, weight: .bold))
+                .foregroundColor(presenter.timeColor)
                 .padding()
                 
             
             HStack {
                 Button(action: presenter.didTapStart) {
                     Text("開始")
-                        .font(.largeTitle)
+                        .font(.title2)
                 }
                 .padding()
                 
                 Button(action: presenter.didTapPause) {
                     Text("暫停")
-                        .font(.largeTitle)
+                        .font(.title2)
                 }
                 .padding()
                 
                 Button(action: presenter.didTapReset) {
                     Text("重置")
-                        .font(.largeTitle)
+                        .font(.title2)
                 }
                 .padding()
             }
             
             Button(action: presenter.didTapToggle) {
                 Text("\(presenter.toggleTitle)")
-                    .font(.largeTitle)
+                    .font(.title2)
             }
             .padding()
             
             Text("\(presenter.finishTimeText)")
-                .font(.system(size: 50, weight: .medium))
+                .font(.title)
                 .padding()
         }
     }

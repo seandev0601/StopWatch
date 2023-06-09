@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
 class StopwatchPresenter: ObservableObject {
     @Published private var stopwatchUseCase: StopwatchUseCase
@@ -62,6 +63,15 @@ class StopwatchPresenter: ObservableObject {
         let seconds = (stopwatchUseCase.elapsedSeconds % 3600) % 60
 
         return String(format: "%02d:%02d", minutes, seconds)
+    }
+    
+    var timeColor: Color {
+        if timer != nil {
+            return Color.black
+        } else {
+            return Color.gray
+        }
+        
     }
     
     private func startTimer() {
